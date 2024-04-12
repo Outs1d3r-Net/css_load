@@ -3,7 +3,10 @@ For pentests, redteam and blueteam of active countermeasures
 
 # Tutorial: Criando um Mini Site sobre Linux com Payload Beef
 
-Neste tutorial, você aprenderá como criar um mini site sobre Linux que contém uma imagem com uma div incorporando um arquivo .png que está sendo processado como .js pelo servidor. Para isso, usaremos o Beef para gerar um payload JavaScript malicioso, configuraremos um servidor PHP para processar arquivos .png como .js e criaremos um código HTML para o mini site.
+
+Alguns anos atrás eu realizei um [POST](https://medium.com/@0uts1d3r/traps-for-your-opponent-php-scripts-in-images-b185f6481103) no Medium falando sobre scripts PHP em imagens que na verdade é uma biblioteca PHP que pode converter um script `.PHP` em uma imagem e junto com o arquivo .htaccess no servidor fazer com que pareça realmente uma imagem mas na verdade é um script `.PHP` executando codigos ocultos no background.  
+
+Neste tutorial, você aprenderá como criar um mini site sobre Linux (ou qualquer coisa que quiser. dica: Utilize chatGPT.) que contém uma imagem com uma div incorporando um arquivo .png que está sendo processado como .js pelo servidor. Para isso, usaremos o Beef para gerar um payload JavaScript malicioso, configuraremos um servidor PHP para processar arquivos .png como .js e criaremos um código HTML para o mini site.  
 
 ## Passo 1: Configurar o Beef
 
@@ -115,7 +118,7 @@ Aqui está um exemplo de código HTML para o mini site sobre Linux:
         </ul>
     </div>
     <div class="background"></div>
-    <script src="payload.png"></script>
+    <script src="payload.png"></script> <!-- Comente este codigo caso queira utilizar payload.php, ele configurado no CSS3 ja é o suficiente. -->
 </body>
 </html>
 
